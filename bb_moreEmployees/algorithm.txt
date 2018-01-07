@@ -1,0 +1,73 @@
+//Honor Pledge: I pledge that I have neither
+//given nor received any undue help on this assignment.
+//
+//strangni
+//
+//CS 240 - Assignment 5 - A Healthy Dose of Inheritance
+//Created by: Nicholas Strange
+
+Goals: 
+		- Read in data from a text file and use it to create types of employees.
+		- Utilize inheritance to establish relationships between employees.
+		
+Input:
+		- Text file containing employee information
+		- Number of hours worked by employees (from user)
+		- Menu selection (from user)
+		
+Output:
+		- List of employee information from text file
+		- List of employee paycheck amounts
+		
+Requirements:
+		- Program must handle any number of employees.
+		- Program must contain Driver, Employee, Pharmacy Manager, Staff Pharmacist, Staff Technician, and Senior Technician classes.
+		- Inheritance must be used to model relationships between employees.
+		- Each student should be printed on a separate line in the console.
+		- Program must handle all exceptions.
+		- Each employee must be stored in an array of its type.
+		- Error message should be printed if user selects to print employee paychecks before entering number of hours worked.
+		- It is assumed that all employees work the same number of hours.
+		
+Step-by-step Details:
+		1. Create Employee class
+				- specify ID, first name, last name, and hourly rate attributes
+				- create printEmployee and printPaycheck methods that utilize polymorphism
+		
+		2. Create Staff Pharmacist class
+				- inherit from Employee class
+				- specify leadership boolean attribute
+				- define constructors, including one that sets attributes
+				- define methods, including one that prints info from text file and one that prints paycheck
+				
+		3. Create Pharmacy Manager class
+				- inherit from Staff Pharmacist class
+				- specify leadership boolean attribute
+				- define constructors, including one that sets attributes
+				- define methods, including one that prints info from text file and one that prints paycheck
+				
+		4. Create Staff Technician class
+				- inherit from Employee class
+				- specify degree boolean attribute
+				- define constructors, including one that sets attributes
+				- define methods, including one that prints info from text file and one that prints paycheck
+				
+		5. Create Senior Technician class
+				- inherit from Staff Technician class
+				- specify service award boolean attribute
+				- define constructors, including one that sets attributes
+				- define methods, including one that prints info from text file and one that prints paycheck
+				
+		6. Create Driver class that runs program
+				- Create first menu (load employees or exit), and read user's selection.
+				- If user selects to load employees, read in data from text file and create the respective employees.
+				- Store each employee in an array structure.
+				- Create second menu (print employees, enter hours worked, calculate paychecks, exit), and read user's selection.
+				- If user selects to print employees, use loop to print all employees' info.
+				- If user selects to enter the hours worked, collect and store the number of hours from the user.
+				- If user selects to print paychecks:
+					- check to see that hours have been entered first, and print error message if not
+					- otherwise, use loop to print all employees' paychecks (pass in number of hours collected from user)
+				
+				
+				
